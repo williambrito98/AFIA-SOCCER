@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "email:dev": "npx ts-node ./src/index.ts getEmails",
-    "email:prod": "node ./dist/index.js getEmails",
+    "email:dev": "npx ts-node ./src/index.ts email",
+    "email:prod": "node ./dist/index.js email",
     "fillForm:dev": "npx ts-node ./src/index.ts fillForm",
-    "fillForm:prod": "node ./dist/index.js fillForm"
+    "fillForm:prod": "node ./dist/index.js fillForm",
+    "build": "./node_modules/.bin/babel src --extensions \".ts\" --out-dir dist --copy-files --no-copy-ignored"
   },
   "keywords": [],
   "author": "",
